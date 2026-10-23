@@ -1,0 +1,23 @@
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #e7ece8;
+  background: #080a09;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-bg: #080a09;
+  --color-panel: #101411;
+  --color-panel-raised: #151b17;
+  --color-text: #e7ece8;
+  --color-muted: #8e9891;
+  --color-subtle: #58625c;
+  --color-line: rgba(231, 236, 232, 0.12);
+  --color-accent: #00e59b;
+  --color-accent-dim: rgba(0, 229, 155, 0.12);
+  --font-display: 'Manrope', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --page-width: 1200px;
+  --page-gutter: clamp(22px, 6vw, 88px);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
