@@ -1,12 +1,18 @@
 import { projects } from './data/projects';
+import MathematicalUniverse from './scenes/MathematicalUniverse';
+import { useGsapMotion } from './hooks/useGsapMotion';
 
 function ArrowUpRight() {
   return <span aria-hidden="true" className="arrow">↗</span>;
 }
 
 function App() {
+  useGsapMotion();
+
   return (
-    <main>
+    <>
+    <a className="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content">
       <header className="site-header shell">
         <a className="wordmark" href="#top" aria-label="Hamza Abdullahi, home">
           <span className="wordmark-mark">H<span>.</span></span>
@@ -40,16 +46,13 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-art" aria-label="Abstract mathematical form placeholder; interactive 3D geometry will be added in Phase 2" role="img">
+        <div className="hero-art" aria-label="Interactive mathematical gyroid visualization">
           <div className="art-index">FIG. 001 <span>FORM / FIELD</span></div>
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="orbit orbit-three" />
-          <div className="math-core"><div className="math-core-inner" /></div>
-          <div className="art-crosshair crosshair-one" />
-          <div className="art-crosshair crosshair-two" />
-          <div className="art-coordinate coordinate-one">x 0.618</div>
-          <div className="art-coordinate coordinate-two">y 1.414</div>
+          <MathematicalUniverse />
+          <div className="art-crosshair crosshair-one" aria-hidden="true" />
+          <div className="art-crosshair crosshair-two" aria-hidden="true" />
+          <div className="art-coordinate coordinate-one" aria-hidden="true">x 0.618</div>
+          <div className="art-coordinate coordinate-two" aria-hidden="true">y 1.414</div>
           <div className="art-caption"><span className="caption-line" /> A STUDY IN FORM & MOTION</div>
         </div>
         <div className="hero-bottom-line"><span>PORTFOLIO / 2026</span><span>SCROLL TO EXPLORE ↓</span></div>
@@ -101,6 +104,7 @@ function App() {
         <div className="footer-bottom"><a className="wordmark" href="#top"><span className="wordmark-mark">H<span>.</span></span><span className="wordmark-label">HAMZA ABDULLAHI</span></a><span>DESIGNED WITH INTENTION · 2026</span><a href="#top">BACK TO TOP ↑</a></div>
       </footer>
     </main>
+    </>
   );
 }
 

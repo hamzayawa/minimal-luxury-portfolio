@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Hamza Abdullahi — Engineering the invisible</title>
+  <desc id="desc">Minimal dark banner with electric emerald mathematical curves and refined typography.</desc>
+  <defs>
+    <radialGradient id="glow"><stop offset="0" stop-color="#00e59b" stop-opacity=".2"/><stop offset="1" stop-color="#00e59b" stop-opacity="0"/></radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e59b" stop-opacity=".8"/><stop offset="1" stop-color="#9fffd9" stop-opacity=".15"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e7ece8" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="320" fill="#080a09"/>
+  <rect width="1200" height="320" fill="url(#grid)"/>
+  <ellipse cx="910" cy="160" rx="330" ry="250" fill="url(#glow)"/>
+  <g fill="none" stroke="url(#line)" stroke-width="1.2" transform="translate(930 160)">
+    <ellipse rx="184" ry="62" transform="rotate(28)"/><ellipse rx="184" ry="62" transform="rotate(88)"/><ellipse rx="184" ry="62" transform="rotate(148)"/>
+    <ellipse rx="128" ry="45" transform="rotate(58)" stroke-opacity=".55"/><circle r="86" stroke-opacity=".5"/>
+    <path d="M-205 0H205M0-112V112" stroke-opacity=".22" stroke-dasharray="3 7"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#e7ece8">
+    <text x="72" y="86" font-size="12" letter-spacing="4" fill="#00e59b">MATHEMATICS · DATA · SOFTWARE</text>
+    <text x="68" y="164" font-size="56" font-weight="600" letter-spacing="-2.8">Hamza Abdullahi</text>
+    <text x="72" y="207" font-size="19" fill="#a6b0a9">Engineering the invisible.</text>
+    <path d="M72 247H130" stroke="#00e59b" stroke-width="2"/>
+    <text x="145" y="251" font-size="10" letter-spacing="2.5" fill="#8e9991">QUANTITATIVE THINKING · THOUGHTFUL SYSTEMS</text>
+  </g>
+</svg>

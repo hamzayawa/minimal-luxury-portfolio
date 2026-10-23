@@ -1,10 +1,10 @@
-# Minimal Luxury Portfolio — Phase 1
+# Minimal Luxury Portfolio
 
-A dark, editorial portfolio foundation for Hamza Abdullahi, using React, TypeScript, Vite, and a restrained electric-emerald design system. The 3D mathematical scene is intentionally not implemented yet; the current hero art is a CSS placeholder for Phase 2.
+An editorial, dark portfolio for Hamza Abdullahi built with React, TypeScript, Vite, Three.js, and GSAP. The visual system pairs a graphite canvas with electric emerald accents and a procedurally generated gyroid-inspired mathematical surface.
 
 ## Requirements
 
-- Node.js 20.19+ or 22.12+
+- Node.js 22 (or Node.js 20.19+)
 - npm
 - Git
 
@@ -23,18 +23,20 @@ npm run build
 npm run preview
 ```
 
-## GitHub repository plan
+## Deployment
 
-The public profile repository `hamzayawa/hamzayawa` already exists. Keep this project in a separate repository named `minimal-luxury-portfolio`, then copy `profile/README.md` into the existing profile repository when ready. The existing `hamzayawa.github.io` website should remain untouched until the replacement is tested and ready.
+The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` builds the site and publishes `dist` to GitHub Pages when changes are pushed to `main`. In the repository settings, select **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 
-The Vite base path is configured for `https://hamzayawa.github.io/minimal-luxury-portfolio/` in GitHub Actions builds. Local development uses `/`.
+The Vite base path is `/minimal-luxury-portfolio/` in GitHub Actions builds and `/` locally. If you rename the repository, update `vite.config.ts` and the portfolio link in `profile/README.md`.
 
-## Current phase
+## Project structure
 
-- [x] Design tokens and global styles
-- [x] Responsive site structure
-- [x] Initial project content model
-- [x] Profile README draft
-- [ ] Three.js mathematical universe (Phase 2)
-- [ ] GSAP choreography (Phase 3)
-- [ ] GitHub Pages deployment workflow (deployment phase)
+- `src/scenes/MathematicalUniverse.tsx` — procedurally generated gyroid-inspired isosurface and WebGL fallback.
+- `src/hooks/useGsapMotion.ts` — entrance and scroll-triggered motion, disabled for reduced-motion preferences.
+- `src/data/projects.ts` — editable featured project data.
+- `src/styles/tokens.css` and `src/styles/global.css` — design tokens and responsive styling.
+- `profile/README.md` — draft for the `hamzayawa/hamzayawa` profile repository.
+
+## Rollout safety
+
+The existing `hamzayawa.github.io` site is not changed by this project. Deploy the new repository as a project site first; only replace the existing portfolio after reviewing the new site in production.
